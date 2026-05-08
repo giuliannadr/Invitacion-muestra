@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, Mail } from 'lucide-react';
 
 const Anketa = () => {
   const [status, setStatus] = useState<'idle' | 'loading' | 'success'>('idle');
@@ -43,9 +43,9 @@ const Anketa = () => {
           {/* Inner elegant border */}
           <div className="absolute inset-0 border border-slate/10 m-3 pointer-events-none transition-colors duration-500 group-hover:border-slate/20"></div>
 
-          {/* R.S.V.P Watermark */}
-          <div className="absolute top-0 right-6 md:right-8 bg-slate text-white px-3 py-4 flex flex-col items-center justify-center transform origin-top shadow-lg">
-             <span className="text-[10px] uppercase tracking-widest font-medium" style={{ writingMode: 'vertical-rl' }}>R.S.V.P</span>
+          {/* Watermark Tag */}
+          <div className="absolute top-0 right-6 md:right-8 bg-slate text-white p-3 flex flex-col items-center justify-center transform origin-top shadow-lg">
+             <Mail className="w-5 h-5 text-white/90" strokeWidth={1.5} />
           </div>
 
           <AnimatePresence mode="wait">
